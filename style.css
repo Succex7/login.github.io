@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #2f4f4f;
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace, sans-serif;
     font-size: medium;
     
 }
@@ -57,4 +57,34 @@ button:focus {
     background:#333;
     color: whitesmoke;
     cursor: pointer;
+}
+
+/* Responsiveness: Fills thhe viewport on smalller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        min-height: 100vh; /* ensure it fills the full viewport height */
+        height: 100vh;
+        margin: 0; /* remove desktop margins */
+        border-radius: 0;
+        box-shadow: none;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .line {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    button {
+        width: calc(100% - 2rem);
+        max-width: 520px;
+        margin: 1rem auto 0;
+        display: block;
+    }
 }
